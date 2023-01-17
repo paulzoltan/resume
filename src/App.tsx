@@ -1,10 +1,8 @@
-import React from 'react'
+import Editor from './components/Editor/Editor'
 import data from './randomJSON.json'
 
-console.log(data)
-
 function App() {
-  return <div className='App'>{JSON.stringify(data)}</div>
+  return <Editor data={data} />
 }
 
 export default App

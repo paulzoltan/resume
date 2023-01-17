@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Consolas';
+  src: local('Consolas'), url('./assets/fonts/consolas.ttf') format('truetype');
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: Consolas, monospace;
+  font-size: min(3vw, 24px);
+  padding: min(3vw, 3em);
+  background-size: cover;
+}
+
+#detach-button-host {
+  display: none;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: #264f78;
+  border-radius: 5px;
+}
+::selection {
+  background: #264f78;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track:vertical {
+  background: #222;
+}
+
+/* Track */
+::-webkit-scrollbar-track:horizontal {
+  background: #2220;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff4;
+}
+::-webkit-scrollbar-corner {
+  background: #222;
+}

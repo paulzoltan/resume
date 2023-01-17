@@ -1,0 +1,41 @@
+.editor__text-area {
+  z-index: 1;
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  caret-color: #d4d4d4;
+}
+.editor__text-area * {
+  white-space: pre;
+}
+.editor__scope {
+  border-left: 1px solid rgb(65, 65, 65);
+  padding-left: 1em;
+  white-space: nowrap;
+}
+.key {
+  color: #9cdcfe;
+}
+.editor__delimiter {
+  color: #d4d4d4;
+}
+.string {
+  color: #ce9178;
+}
+.number {
+  color: #b5cea8;
+}
+.boolean {
+  color: #569cd6;
+}
+.bracket0 {
+  color: #ffd700;
+}
+.bracket1 {
+  color: #da70d6;
+}
+.bracket2 {
+  color: #179fff;
+}
+.highlighted {
+  background-color: #474747;
+}
