@@ -2,6 +2,7 @@ import './photo.css'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { BsImages } from 'react-icons/bs'
 import { useState } from 'react'
+import { motion, useDragControls } from 'framer-motion'
 
 export interface PhotoProps {
   image: string
@@ -9,9 +10,15 @@ export interface PhotoProps {
 }
 const Photo = ({ image, title }: PhotoProps) => {
   const [open, setOpen] = useState(true)
+  const controls = useDragControls()
   if (!open) return <></>
   return (
-    <div className='photo'>
+    <motion.div
+      className='photo'
+      drag
+      dragControls={controls}
+      dragMomentum={false}
+    >
       <div className='photo__title-bar'>
         <div className='photo__icon'>
           <BsImages />
@@ -29,7 +36,7 @@ const Photo = ({ image, title }: PhotoProps) => {
       <div className='photo__vignetting'>
         <img className='photo__image' src={image} alt='pz' />
       </div>
-    </div>
+    </motion.div>
   )
 }
 export default Photo
