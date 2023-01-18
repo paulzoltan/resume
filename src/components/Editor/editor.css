@@ -3,7 +3,6 @@
   background-image: url(../../assets/images/bg-code.png);
   background-repeat: no-repeat;
   color: #ababab;
-  border-radius: 0.5em;
   overflow: hidden;
   box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
   max-height: 100%;
@@ -11,7 +10,11 @@
   flex-direction: column;
   position: relative;
 }
-
+@media screen and (min-width: 600px) {
+  .editor {
+    border-radius: 0.5em;
+  }
+}
 .editor__title-bar {
   color: #ffffff;
   font-size: 0.8em;
