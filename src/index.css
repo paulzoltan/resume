@@ -14,6 +14,7 @@ body {
   font-size: min(3vw, 24px);
   padding: min(3vw, 3em);
   background-size: cover;
+  background-image: url(./assets/images/bg.svg);
 }
 
 #detach-button-host {

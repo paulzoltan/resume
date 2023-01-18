@@ -1,0 +1,56 @@
+<svg  version="1.1" xmlns="http://www.w3.org/2000/svg"  fill="url(#grad1)" viewBox="0 0 100 100">
+
+  <defs>
+  <linearGradient id="grad" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(15)">
+    <stop stop-color="#2b4a42" offset="0"/>
+    <stop stop-color="#2a2d3c" offset="1"/>
+  </linearGradient>
+    <g id="pod">
+      <polygon fill="#3399992f" points="5,-9 -5,-9 -10,0 -5,9 5,9 10,0" />
+      <polygon stroke="#3399991f" stroke-width="0.3" fill="none" points="6,-10.8 -6,-10.8 -12,0 -6,10.8 6,10.8 12,0" />
+    </g>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grad)" />
+  <g class="pod-wrap">
+    <use href="#pod" transform="translate(73, 54), scale(0.47)"  opacity="0.88"/>
+    <use href="#pod" transform="translate(51, 88), scale(0.19)"  opacity="0.63"/>
+    <use href="#pod" transform="translate(54, 94), scale(0.38)"  opacity="0.73"/>
+    <use href="#pod" transform="translate(45, 63), scale(0.58)"  opacity="0.90"/>
+    <use href="#pod" transform="translate(28, 78), scale(0.36)"  opacity="0.43"/>
+    <use href="#pod" transform="translate(51, 62), scale(0.42)"  opacity="0.83"/>
+    <use href="#pod" transform="translate(50, 82), scale(0.97)"  opacity="0.15"/>
+    <use href="#pod" transform="translate(95, 68), scale(0.68)"  opacity="0.66"/>
+    <use href="#pod" transform="translate(96, 67), scale(0.79)"  opacity="0.24"/>
+    <use href="#pod" transform="translate(89, 73), scale(0.91)"  opacity="0.46"/>
+    <use href="#pod" transform="translate(39, 53), scale(0.48)"  opacity="0.52"/>
+    <use href="#pod" transform="translate(95, 40), scale(0.90)"  opacity="0.54"/>
+    <use href="#pod" transform="translate(64, 84), scale(0.24)"  opacity="0.64"/>
+    <use href="#pod" transform="translate(22, 65), scale(0.16)"  opacity="0.54"/>
+    <use href="#pod" transform="translate(69, 38), scale(0.34)"  opacity="0.92"/>
+    <use href="#pod" transform="translate(65, 37), scale(0.96)"  opacity="0.41"/>
+    <use href="#pod" transform="translate(94, 64), scale(0.26)"  opacity="0.28"/>
+    <use href="#pod" transform="translate(74, 88), scale(0.92)"  opacity="0.72"/>
+    <use href="#pod" transform="translate(44, 67), scale(0.94)"  opacity="0.92"/>
+    <use href="#pod" transform="translate(45, 84), scale(0.20)"  opacity="0.80"/>
+    <use href="#pod" transform="translate(29, 63), scale(0.73)"  opacity="0.74"/>
+    <use href="#pod" transform="translate(23, 74), scale(0.59)"  opacity="0.18"/>
+    <use href="#pod" transform="translate(27, 51), scale(0.52)"  opacity="0.72"/>
+    <use href="#pod" transform="translate(83, 35), scale(0.73)"  opacity="0.97"/>
+    <use href="#pod" transform="translate(80, 57), scale(0.77)"  opacity="0.87"/>
+    <use href="#pod" transform="translate(23, 100), scale(0.39)"  opacity="0.64"/>
+    <use href="#pod" transform="translate(49, 97), scale(0.74)"  opacity="0.83"/>
+    <use href="#pod" transform="translate(41, 37), scale(0.27)"  opacity="0.69"/>
+    <use href="#pod" transform="translate(65, 96), scale(0.61)"  opacity="0.45"/>
+    <use href="#pod" transform="translate(76, 48), scale(0.77)"  opacity="0.86"/>
+    <use href="#pod" transform="translate(45, 39), scale(0.76)"  opacity="0.24"/>
+    <use href="#pod" transform="translate(60, 48), scale(0.66)"  opacity="0.65"/>
+    <use href="#pod" transform="translate(33, 71), scale(0.26)"  opacity="0.25"/>
+    <use href="#pod" transform="translate(86, 50), scale(0.92)"  opacity="0.16"/>
+    <use href="#pod" transform="translate(100, 45), scale(0.98)"  opacity="0.57"/>
+    <use href="#pod" transform="translate(58, 37), scale(0.89)"  opacity="0.77"/>
+    <use href="#pod" transform="translate(81, 48), scale(0.97)"  opacity="0.43"/>
+    <use href="#pod" transform="translate(25, 54), scale(0.100)"  opacity="0.99"/>
+    <use href="#pod" transform="translate(42, 71), scale(0.91)"  opacity="0.26"/>
+    <use href="#pod" transform="translate(83, 67), scale(0.23)"  opacity="0.53"/>
+  </g>
+</svg>
