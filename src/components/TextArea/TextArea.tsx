@@ -10,7 +10,7 @@ function TextArea({ data }: TextAreaProps) {
   /** The highlighted text */
   const [highlighted, setHighlighted] = useState('')
   /**
-   * If the cursor is in an element (or the selection starts and ends in the
+   * If the cursor is in an element (or a selection starts and ends in the
    * same element) that has the class "highlightable" set the "highlighted" state
    * to the text of that element.
    */
@@ -30,6 +30,7 @@ function TextArea({ data }: TextAreaProps) {
       setHighlighted(!spread && highlightable ? selectedText : '')
     })
   }
+  /**  Only the navigation keys can take effect. */
   const filterNavKeys = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (
       ![
@@ -64,7 +65,8 @@ function TextArea({ data }: TextAreaProps) {
   /**
    * Place each word of the text within a separate span element that has the
    * class "highlightable". If the word is equal to the value of the state
-   * "highlighted", the span should also have the class "highlighted".
+   * "highlighted", the span should also have the class "highlighted". If the
+   * word is an url make a link from it.
    */
   function wrapWords(text: string) {
     const separator = /(\s|"|,+)/
@@ -81,11 +83,20 @@ function TextArea({ data }: TextAreaProps) {
             highlighted: word === highlighted,
           })}
         >
-          {word}
+          {linkify(word)}
         </span>
       )
     )
     return wrapedWordsText
+
+    /**
+     * If the text is a URL, encase it in an "a" HTML tag.
+     */
+    function linkify(text: string) {
+      const url =
+        /^(http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
+      return url.test(text) ? <a href={text}>{text}</a> : text
+    }
   }
   /**
    * Stringify, prettyfy, syntax highligh a variable, and also apply the

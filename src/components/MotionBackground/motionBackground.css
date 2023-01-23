@@ -1,8 +1,20 @@
 .backgroundVideo {
-  opacity: 0.6;
+  opacity: 0.15;
   position: absolute;
   z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.backgroundVideo.strings {
+  opacity: 0.2;
+}
+.backgroundVideo.circuit {
+  opacity: 0.2;
+}
+.backgroundVideo.particles {
+  opacity: 0.25;
+}
+.backgroundVideo.cyberpunk {
+  opacity: 0.1;
 }

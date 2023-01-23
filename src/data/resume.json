@@ -1,0 +1,44 @@
+{
+  "Elérhetőség": {
+    "név": "Paul Zoltán",
+    "email": "paulzoltan02@gmail.com",
+    "telefon": 36303364309,
+    "cím": "Budapest, 8. kerület",
+    "GitHub": "https://github.com/paulzoltan"
+  },
+  "Technológiák": {
+    "Backend": ["PHP", "Yii2 Framework", "MySQL"],
+
+    "Frontend": [
+      "HTML",
+      "CSS/SASS - Reszponzív",
+      "Bootstrap",
+      "SVG",
+      "Javascript",
+      "JQuery",
+      "P5.JS",
+      "npm",
+      "Webpack",
+      "React.JS",
+      "TypeScript"
+    ],
+
+    "Egyéb technológiák": [
+      "Git - GitHub",
+      "Photoshop",
+      "Google Analytics/Console/Ad Manager/Adsense",
+      "cms-ek"
+    ],
+
+    "Egyébb ismeretek": [
+      "Stabil matematika alapok",
+      "Algoritmusok és adatszerkezetek",
+      "SEO",
+      "Erős középfokú angol nyelvtudás",
+      "Kreativitás",
+      "Rajztudás",
+      "Web design",
+      "UI/UX"
+    ]
+  }
+}

@@ -3,6 +3,7 @@
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   caret-color: #d4d4d4;
+  width: 100%;
 }
 .editor__text-area * {
   white-space: pre;
@@ -38,4 +39,10 @@
 }
 .highlighted {
   background-color: #474747;
+}
+
+a {
+  text-decoration: underline;
+  -moz-user-modify: read-only;
+  -webkit-user-modify: read-only;
 }
