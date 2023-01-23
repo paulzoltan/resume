@@ -3,6 +3,7 @@
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   caret-color: #d4d4d4;
+  width: 100%;
 }
 .editor__text-area * {
   white-space: pre;

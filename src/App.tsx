@@ -1,6 +1,6 @@
 import Editor from './components/Editor/Editor'
 import Photo from './components/Photo/Photo'
-import data from './randomJSON.json'
+import data from './data/resume.json'
 import image from './assets/images/pz.png'
 
 function App() {

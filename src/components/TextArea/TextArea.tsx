@@ -10,7 +10,7 @@ function TextArea({ data }: TextAreaProps) {
   /** The highlighted text */
   const [highlighted, setHighlighted] = useState('')
   /**
-   * If the cursor is in an element (or the selection starts and ends in the
+   * If the cursor is in an element (or a selection starts and ends in the
    * same element) that has the class "highlightable" set the "highlighted" state
    * to the text of that element.
    */
@@ -30,6 +30,7 @@ function TextArea({ data }: TextAreaProps) {
       setHighlighted(!spread && highlightable ? selectedText : '')
     })
   }
+  /**  Only the navigation keys can take effect. */
   const filterNavKeys = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (
       ![

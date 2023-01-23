@@ -11,15 +11,14 @@ const randomNum = Math.floor(Math.random() * videos.length)
 const randomVideo = videos[randomNum]
 /**
  * Get the video name
- * exemple :/static/media/strings.cyberpunk.mp4 => cyberpunk
+ * exemple: /static/media/strings.cyberpunk.mp4 => cyberpunk
  */
 const randomVideoName = randomVideo.split('/').pop()?.split('.')[0]
 
-console.log(randomVideo, randomVideoName)
 const MotionBackground = () => {
   return (
     <video
-      className={classNames('backgroundVideo', 'videos' + randomVideoName)}
+      className={classNames('backgroundVideo', randomVideoName)}
       autoPlay
       loop
       muted
