@@ -14,31 +14,40 @@
   white-space: nowrap;
 }
 .key {
-  color: #9cdcfe;
+  color: #dff4ffdd;
+  text-shadow: 0 0 0.2em #00a7ffaa; /* #9cdcfe; */
 }
 .editor__delimiter {
-  color: #d4d4d4;
+  color: #ebebebdd;
+  text-shadow: 0 0 0.2em #d4d4d4aa; /* d4d4d4 */
 }
 .string {
-  color: #ce9178;
+  color: #dfc8bfdd;
+  text-shadow: 0 0 0.2em #ff4a03aa; /* #ce9178 */
 }
 .number {
-  color: #b5cea8;
+  color: #ecfee2dd;
+  text-shadow: 0 0 0.2em #59ff00aa; /* b5cea8 */
 }
 .boolean {
-  color: #569cd6;
+  color: #c2e3ffdd;
+  text-shadow: 0 0 0.2em #008cffaa; /* 569cd6 */
 }
 .bracket0 {
-  color: #ffd700;
+  color: #ffed89dd;
+  text-shadow: 0 0 0.2em #ffd700aa; /* ffd700 */
 }
 .bracket1 {
-  color: #da70d6;
+  color: #eebbeadd;
+  text-shadow: 0 0 0.2em #ff00f7aa; /* da70d6 */
 }
 .bracket2 {
-  color: #179fff;
+  color: #64bbf9dd;
+  text-shadow: 0 0 0.2em #0095ffaa; /* 179fff */
 }
 .highlighted {
-  background-color: #474747;
+  background-color: #fff3; /* #474747 */
+  box-shadow: 0 0 0.1em #646464;
 }
 
 a {

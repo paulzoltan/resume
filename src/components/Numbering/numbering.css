@@ -1,7 +1,8 @@
 .numbering {
   text-align: right;
   padding: 0 1em;
-  color: #888;
+  color: #aaa; /* #888 */
+  text-shadow: 0 0 0.1em #888;
 
   -webkit-user-select: none;
   -ms-user-select: none;
