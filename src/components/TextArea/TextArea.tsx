@@ -1,14 +1,42 @@
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './text-area.css'
-import classnames from 'classnames'
+import prefixJsx from './prefixJsx'
+import countLines from './countLines'
+import stringify from './stringify'
 
 export interface TextAreaProps {
-  data: any
+  dataToDisplay: any
+  handleLineNumberChange: (lineNumber: number) => void
 }
+
 /** The TextArea component */
-function TextArea({ data }: TextAreaProps) {
+function TextArea({ dataToDisplay, handleLineNumberChange }: TextAreaProps) {
+  const stringifiedDataLength = useMemo(
+    () => JSON.stringify(dataToDisplay).replace(/\s/g, '').length,
+    [dataToDisplay]
+  )
   /** The highlighted text */
   const [highlighted, setHighlighted] = useState('')
+  const [limit, setLimit] = useState(0)
+
+  useEffect(() => {
+    if (limit > stringifiedDataLength) {
+      return
+    }
+    let timeoutId: ReturnType<typeof setTimeout>
+    const setLoop = () => {
+      timeoutId = setTimeout(() => {
+        setLimit((l) => l + 1)
+        setLoop()
+      }, 0)
+    }
+    setLoop()
+
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }, [limit, stringifiedDataLength])
+
   /**
    * If the cursor is in an element (or a selection starts and ends in the
    * same element) that has the class "highlightable" set the "highlighted" state
@@ -47,6 +75,17 @@ function TextArea({ data }: TextAreaProps) {
       e.preventDefault()
     }
   }
+  const jsx = useMemo(() => {
+    console.log(stringify(dataToDisplay, highlighted))
+    return stringify(dataToDisplay, highlighted)
+  }, [dataToDisplay, highlighted])
+  const stringifiedData = prefixJsx(jsx, limit)
+
+  const lineNumber = countLines(stringifiedData) + 1
+  useEffect(() => {
+    handleLineNumberChange(lineNumber)
+  }, [lineNumber, handleLineNumberChange])
+
   return (
     <div
       className='editor__text-area'
@@ -59,101 +98,8 @@ function TextArea({ data }: TextAreaProps) {
       spellCheck='false'
       // contentEditable={true}
     >
-      {stringify(data)}
+      {stringifiedData}
     </div>
   )
-  /**
-   * Place each word of the text within a separate span element that has the
-   * class "highlightable". If the word is equal to the value of the state
-   * "highlighted", the span should also have the class "highlighted". If the
-   * word is an url make a link from it.
-   */
-  function wrapWords(text: string) {
-    const separator = /(\s|"|,+)/
-    const words = text.split(separator)
-
-    const wrapedWordsText = words.map((word, index) =>
-      separator.test(word) ? (
-        word
-      ) : (
-        <span
-          key={index}
-          className={classnames({
-            highlightable: true,
-            highlighted: word === highlighted,
-          })}
-        >
-          {linkify(word)}
-        </span>
-      )
-    )
-    return wrapedWordsText
-
-    /**
-     * If the text is a URL, encase it in an "a" HTML tag.
-     */
-    function linkify(text: string) {
-      const url =
-        /^(http:\/\/|https:\/\/)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/
-      return url.test(text) ? <a href={text}>{text}</a> : text
-    }
-  }
-  /**
-   * Stringify, prettyfy, syntax highligh a variable, and also apply the
-   * "wrapWords" function to its text.
-   */
-  function stringify(data: any): JSX.Element {
-    return processVar(data, 0)
-
-    function processVar(v: any, depth: number) {
-      return typeof v === 'object' && v !== null ? (
-        Array.isArray(v) ? ( // if v is array
-          <>
-            <span className={'bracket' + (depth % 3)}>&#91;</span>
-            {!!v.length && (
-              <div className='editor__scope'>
-                {v.map((item: any, index, arr) => (
-                  <div key={index}>
-                    {processVar(item, depth + 1)}
-                    {index < arr.length - 1 && (
-                      <span className='editor__delimiter'>,</span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-            <span className={'bracket' + (depth % 3)}>&#93;</span>
-          </>
-        ) : (
-          // if v is object
-          <>
-            <span className={'bracket' + (depth % 3)}>&#123;</span>
-            {!!Object.entries(v).length && (
-              <div className='editor__scope'>
-                {Object.entries(v).map(([key, value], index, arr) => (
-                  <div key={index}>
-                    <span className='key'>"{wrapWords(key)}"</span>
-                    <span className='editor__delimiter'>: </span>
-                    {processVar(value, depth + 1)}
-                    {index < arr.length - 1 && (
-                      <span className='editor__delimiter'>,</span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-            <span className={'bracket' + (depth % 3)}>&#125;</span>
-          </>
-        )
-      ) : (
-        // if v is primitive
-        <span className={`inline ${typeof v}`}>
-          {wrapWords(
-            typeof v === 'string' ? JSON.stringify(v.toString()) : v.toString()
-          )}
-        </span>
-      )
-    }
-  }
 }
 export default TextArea

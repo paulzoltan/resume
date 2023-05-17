@@ -3,7 +3,7 @@
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   caret-color: #d4d4d4;
-  width: 100%;
+  /* width: 100%; */
 }
 .editor__text-area * {
   white-space: pre;
@@ -13,37 +13,38 @@
   padding-left: 1em;
   white-space: nowrap;
 }
+
 .key {
-  color: #dff4ffdd;
-  text-shadow: 0 0 0.2em #00a7ffaa; /* #9cdcfe; */
+  color: #dff4ffff;
+  text-shadow: 0 0 0.2em #00a7ffff; /* #9cdcfe; */
 }
 .editor__delimiter {
-  color: #ebebebdd;
-  text-shadow: 0 0 0.2em #d4d4d4aa; /* d4d4d4 */
+  color: #ebebebff;
+  text-shadow: 0 0 0.2em #d4d4d4ff; /* d4d4d4 */
 }
 .string {
-  color: #dfc8bfdd;
-  text-shadow: 0 0 0.2em #ff4a03aa; /* #ce9178 */
+  color: #dfc8bfff;
+  text-shadow: 0 0 0.2em #ff4a03ff; /* #ce9178 */
 }
 .number {
-  color: #ecfee2dd;
-  text-shadow: 0 0 0.2em #59ff00aa; /* b5cea8 */
+  color: #ecfee2ff;
+  text-shadow: 0 0 0.2em #59ff00ff; /* b5cea8 */
 }
 .boolean {
-  color: #c2e3ffdd;
-  text-shadow: 0 0 0.2em #008cffaa; /* 569cd6 */
+  color: #c2e3ffff;
+  text-shadow: 0 0 0.2em #008cffff; /* 569cd6 */
 }
 .bracket0 {
-  color: #ffed89dd;
-  text-shadow: 0 0 0.2em #ffd700aa; /* ffd700 */
+  color: #ffed89ff;
+  text-shadow: 0 0 0.2em #ffd700ff; /* ffd700 */
 }
 .bracket1 {
-  color: #eebbeadd;
-  text-shadow: 0 0 0.2em #ff00f7aa; /* da70d6 */
+  color: #eebbeaff;
+  text-shadow: 0 0 0.2em #ff00f7ff; /* da70d6 */
 }
 .bracket2 {
-  color: #64bbf9dd;
-  text-shadow: 0 0 0.2em #0095ffaa; /* 179fff */
+  color: #64bbf9ff;
+  text-shadow: 0 0 0.2em #0095ffff; /* 179fff */
 }
 .highlighted {
   background-color: #fff3; /* #474747 */
@@ -54,4 +55,17 @@ a {
   text-decoration: underline;
   -moz-user-modify: read-only;
   -webkit-user-modify: read-only;
+}
+
+.cursor {
+  color: #fff;
+  text-shadow: 0.1em 0 0.1em #ff00ff, -0.1em 0 0.1em #00ff33, 0 0 0.5em #fff;
+  /* text-shadow: 0 0 0.5em greenyellow; */
+}
+.editor__text-area span {
+  transition-property: color, text-shadow;
+  transition-duration: 0.5s;
+}
+*:has(> .being-typed) {
+  color: #fff;
 }

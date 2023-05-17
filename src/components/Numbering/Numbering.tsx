@@ -1,16 +1,12 @@
 import './numbering.css'
 
 export interface NumberingProps {
-  data: any
+  lineNumber: number
 }
-const Numbering = ({ data }: NumberingProps) => {
-  const countLines = (data: any) => {
-    return JSON.stringify(data, null, 2).split(/\n/).length
-  }
-
+const Numbering = ({ lineNumber }: NumberingProps) => {
   return (
     <div className='numbering'>
-      {Array.from(Array(countLines(data)).keys()).map((key) => (
+      {Array.from(Array(lineNumber).keys()).map((key) => (
         <div key={key}>{key}</div>
       ))}
     </div>

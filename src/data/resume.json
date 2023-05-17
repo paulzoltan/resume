@@ -7,20 +7,20 @@
     "GitHub": "https://github.com/paulzoltan"
   },
   "Technológiák": {
-    "Backend": ["PHP", "Yii2 Framework", "MySQL"],
+    "Backend": ["PHP    3 év", "Yii2   2 év", "MySQL"],
 
     "Frontend": [
-      "HTML",
-      "CSS/SASS - Reszponzív",
+      "HTML         5 év",
+      "CSS/SASS     5 év",
       "Bootstrap",
       "SVG",
-      "Javascript",
-      "JQuery",
+      "Javascript   4 év",
+      "JQuery év",
       "P5.JS",
       "npm",
       "Webpack",
-      "React.JS",
-      "TypeScript"
+      "React.JS     2 év",
+      "TypeScript   1 év"
     ],
 
     "Egyéb technológiák": [
@@ -40,5 +40,10 @@
       "Web design",
       "UI/UX"
     ]
+  },
+  "Szakmai tapasztalat": {
+    "2013 - 2015": "Saját tulajdonú oktatási célú webalkalmazás készítése(php/yii2 backend)",
+    "2014 - Jelenleg": "Említett webalkalmazás karbantartása, üzemeltetése",
+    "2020 - Jelenleg": "Vállalkozóként weblapok készítése megrendelésere."
   }
 }
