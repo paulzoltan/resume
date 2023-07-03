@@ -5,14 +5,20 @@
   color: #ababab;
   overflow: hidden;
   box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
-  height: 100%;
+  height: calc(100% - (min(4vw, 3em)) * 2);
+  margin: min(4vw, 3em);
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 @media screen and (min-width: 800px) {
   .editor {
     border-radius: 0.25em;
+  }
+}
+@media screen and (max-width: 801px) {
+  .editor {
+    margin: 0;
+    height: 100%;
   }
 }
 .editor__title-bar {

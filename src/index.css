@@ -7,21 +7,15 @@ html,
 body,
 #root {
   height: 100%;
+  overflow: auto;
 }
 
 body {
   font-family: Consolas, monospace;
   font-size: min(3vw, 24px);
-  padding: min(4vw, 3em);
   background-color: #2a4340;
   background-size: cover;
   background-image: url(./assets/images/bg.svg);
-}
-
-@media screen and (max-width: 800px) {
-  body {
-    padding: 0;
-  }
 }
 
 /* Code to hide extra buttons in videos in Opera */
