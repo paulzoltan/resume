@@ -26,7 +26,7 @@ function TextArea({ dataToDisplay }: TextAreaProps) {
       timeoutId = setTimeout(() => {
         setLimit((l) => l + 1)
         setLoop()
-      }, 0)
+      }, 4)
     }
     setLoop()
 
