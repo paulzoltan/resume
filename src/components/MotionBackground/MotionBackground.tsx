@@ -2,10 +2,11 @@ import video0 from '../../assets/videos/particles.mp4'
 import video1 from '../../assets/videos/circuit.mp4'
 import video2 from '../../assets/videos/strings.mp4'
 import video3 from '../../assets/videos/cyberpunk.mp4'
+import video4 from '../../assets/videos/giphy.gif'
 import classNames from 'classnames'
 import './motionBackground.css'
 
-const videos = [video0, video1, video2, video3]
+const videos = [video0, video1, video2, video3, video4]
 
 const randomNum = Math.floor(Math.random() * videos.length)
 const randomVideo = videos[randomNum]
@@ -17,6 +18,7 @@ const randomVideoName = randomVideo.split('/').pop()?.split('.')[0]
 
 const MotionBackground = () => {
   return (
+    // <img src={video4} alt='' className={classNames('backgroundVideo')} />
     <video
       className={classNames('backgroundVideo', randomVideoName)}
       autoPlay

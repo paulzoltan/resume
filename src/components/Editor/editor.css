@@ -32,10 +32,7 @@
   vertical-align: top;
 }
 
-.editor__body {
-  display: flex;
-  flex-direction: row;
-  padding-top: 0.15em;
-  padding-bottom: 0.15em;
+.editor__body--wrapper {
   overflow-x: overlay;
+  position: relative;
 }

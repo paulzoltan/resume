@@ -23,14 +23,11 @@
       "TypeScript   1 év"
     ],
 
-    "Egyéb technológiák": [
+    "Egyéb": [
       "Git - GitHub",
       "Photoshop",
       "Google Analytics/Console/Ad Manager/Adsense",
-      "cms-ek"
-    ],
-
-    "Egyéb ismeretek": [
+      "cms-ek",
       "Stabil matematikai alapok",
       "Algoritmusok és adatszerkezetek",
       "SEO",
@@ -42,8 +39,12 @@
     ]
   },
   "Szakmai tapasztalat": {
-    "2013 - 2015": "Saját tulajdonú oktatási célú webalkalmazás készítése(php/yii2 backend)",
-    "2014 - Jelenleg": "Említett webalkalmazás karbantartása, üzemeltetése",
-    "2020 - Jelenleg": "Vállalkozóként weblapok készítése megrendelésere."
-  }
+    "2022": "Iparművészeti eljárás kifejlesztésének keretein belül egy a Computational Parquetry témakörével foglalkozó program készítése (JavaScript)",
+    "2020-tól": "Vállalkozóként weblapok készítése megrendelésre",
+    "2019": "Saját tulajdonú, nagy felhasználóbázissal rendelkező, oktatási célú webalkalmazás, újraépítése, bővítése (PHP/YII2 back-end)",
+    "2014-től": "Említett webalkalmazás karbantartása, üzemeltetése",
+    "2013 - 2015": "Említett saját webalkalmazás készítése (PHP back-end)",
+    "2013": "Beosztás tervező program készítése egy futárcég számára az operációkutatás szimplex módszerének implementálásával"
+  },
+  "Összegzés": "Tapasztalatom a programozásban saját projektekkel és vállalkozóként végzett munkával szereztem. Gyakorlott vagyok a programozás több területén, de jelenleg webfejlesztéssel, azon belül is Front-End-del, szeretnék leginkább foglalkozni. Rajztudásom mellett képes vagyok grafikai feladatokat is megoldani, illetve az UX/UI területén is otthonosan mozgok. Megoldást tudok találni a fejlesztés során felmerülő matematikai jellegű problémákra is. Úgy érzem, ezidáig sikeresen fejlődtem önállóan, de a csapatban végzett munka egy cégnél más rálátást biztosít a szakmára, ennélfogva új értékes tapasztalatokat kínál. Azt is értékelném, ha a mindennapi munkám során lehetőségem lenne élőszóban is használni az angol nyelvet. Csatlakoznék egy olyan csapathoz, amely segít abban, hogy fejlődjek és új tapasztalatokat szerezzek a szakmában."
 }

@@ -1,16 +1,14 @@
 import { useEffect, useMemo, useState } from 'react'
 import './text-area.css'
 import prefixJsx from './prefixJsx'
-import countLines from './countLines'
 import stringify from './stringify'
 
 export interface TextAreaProps {
   dataToDisplay: any
-  handleLineNumberChange: (lineNumber: number) => void
 }
 
 /** The TextArea component */
-function TextArea({ dataToDisplay, handleLineNumberChange }: TextAreaProps) {
+function TextArea({ dataToDisplay }: TextAreaProps) {
   const stringifiedDataLength = useMemo(
     () => JSON.stringify(dataToDisplay).replace(/\s/g, '').length,
     [dataToDisplay]
@@ -80,11 +78,6 @@ function TextArea({ dataToDisplay, handleLineNumberChange }: TextAreaProps) {
     return stringify(dataToDisplay, highlighted)
   }, [dataToDisplay, highlighted])
   const stringifiedData = prefixJsx(jsx, limit)
-
-  const lineNumber = countLines(stringifiedData) + 1
-  useEffect(() => {
-    handleLineNumberChange(lineNumber)
-  }, [lineNumber, handleLineNumberChange])
 
   return (
     <div

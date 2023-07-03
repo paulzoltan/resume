@@ -3,17 +3,14 @@
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   caret-color: #d4d4d4;
-  /* width: 100%; */
-}
-.editor__text-area * {
-  white-space: pre;
+  max-width: 40em;
+  margin-left: 4em;
+  padding-bottom: 100%;
 }
 .editor__scope {
   border-left: 1px solid rgb(65, 65, 65);
   padding-left: 1em;
-  white-space: nowrap;
 }
-
 .key {
   color: #dff4ffff;
   text-shadow: 0 0 0.2em #00a7ffff; /* #9cdcfe; */
@@ -59,7 +56,7 @@ a {
 
 .cursor {
   color: #fff;
-  text-shadow: 0.1em 0 0.1em #ff00ff, -0.1em 0 0.1em #00ff33, 0 0 0.5em #fff;
+  text-shadow: 0.1em 0 0.1em #ff44ff, -0.1em 0 0.1em #00ff33, 0 0 0.5em #fff;
   /* text-shadow: 0 0 0.5em greenyellow; */
 }
 .editor__text-area span {
@@ -68,4 +65,13 @@ a {
 }
 *:has(> .being-typed) {
   color: #fff;
+  text-shadow: 0.1em 0 0.1em #ff44ff, -0.1em 0 0.1em #00ff33, 0 0 0.5em #fff;
+}
+
+.dot {
+  position: absolute;
+  left: 0;
+  width: 3em;
+  text-align: right;
+  text-shadow: 0 0 0.1em #888;
 }

@@ -1,16 +1,12 @@
 import TextArea from '../TextArea/TextArea'
-import Numbering from '../Numbering/Numbering'
 import MotionBackground from '../MotionBackground/MotionBackground'
 import './editor.css'
-import { useState } from 'react'
 
 export interface EditorProps {
   data: any
 }
 
 const Editor = ({ data }: EditorProps) => {
-  const [lineNumber, setLineNumber] = useState(0)
-
   return (
     <div className='editor'>
       <MotionBackground />
@@ -18,9 +14,8 @@ const Editor = ({ data }: EditorProps) => {
         <div className='editor__icon'>{'{}'} </div>
         resume.json
       </div>
-      <div className='editor__body'>
-        <Numbering {...{ lineNumber }} />
-        <TextArea dataToDisplay={data} handleLineNumberChange={setLineNumber} />
+      <div className='editor__body--wrapper'>
+        <TextArea dataToDisplay={data} />
       </div>
     </div>
   )

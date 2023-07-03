@@ -26,7 +26,11 @@ export default function prefixJsx(jsx: JSX.Element, limit: number) {
       if (omit) break
       const child = children[key]
       if (React.isValidElement(child)) {
-        clonedChildren.push(cloneJSXElement(child))
+        if (child.props.className === 'dot') {
+          clonedChildren.push(child)
+        } else {
+          clonedChildren.push(cloneJSXElement(child))
+        }
       } else {
         letterCount += countNonWhiteSpace(child.toString())
         if (letterCount > limit) {
