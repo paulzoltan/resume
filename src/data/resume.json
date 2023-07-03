@@ -4,7 +4,8 @@
     "email": "paulzoltan02@gmail.com",
     "telefon": 36303364309,
     "cím": "Budapest, 8. kerület",
-    "GitHub": "https://github.com/paulzoltan"
+    "GitHub": "https://github.com/paulzoltan",
+    "CV": "https://csaknem.hu/paul-zoltan.pdf"
   },
   "Technológiák": {
     "Backend": ["PHP    3 év", "Yii2   2 év", "MySQL"],
