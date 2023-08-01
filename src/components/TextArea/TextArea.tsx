@@ -74,7 +74,6 @@ function TextArea({ dataToDisplay }: TextAreaProps) {
     }
   }
   const jsx = useMemo(() => {
-    console.log(stringify(dataToDisplay, highlighted))
     return stringify(dataToDisplay, highlighted)
   }, [dataToDisplay, highlighted])
   const stringifiedData = prefixJsx(jsx, limit)
