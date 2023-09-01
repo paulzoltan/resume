@@ -1,8 +1,12 @@
 import Editor from './components/Editor/Editor'
 import Photo from './components/Photo/Photo'
-import data from './data/resume.json'
 import image from './assets/images/pz.png'
 import MotionBackground from './components/MotionBackground/MotionBackground'
+import { encodeNumerics } from './utils/helpers'
+/* eslint import/no-webpack-loader-syntax: off */
+import rawJsonData from '!!raw-loader!./data/resume'
+
+const data = JSON.parse(encodeNumerics(rawJsonData))
 
 function App() {
   return (

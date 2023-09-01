@@ -1,3 +1,4 @@
+import { decodeNumeric } from '../../utils/helpers'
 import wrapWord from './wrapWord'
 
 /**
@@ -46,7 +47,9 @@ export default function stringify(data: any, highlighted: string) {
                 {Object.entries(v).map(([key, value], index, arr) => (
                   <div key={index}>
                     <div className='dot'>{counter++}</div>
-                    <span className='key'>"{wrapWord(key, highlighted)}"</span>
+                    <span className='key'>
+                      "{wrapWord(decodeNumeric(key), highlighted)}"
+                    </span>
                     <span className='editor__delimiter'>: </span>
                     {processVar(value, depth + 1)}
                     {index < arr.length - 1 && (
@@ -65,7 +68,9 @@ export default function stringify(data: any, highlighted: string) {
       // if v is primitive
       <span className={`inline ${typeof v}`}>
         {wrapWord(
-          typeof v === 'string' ? JSON.stringify(v.toString()) : v.toString(),
+          typeof v === 'string'
+            ? JSON.stringify(decodeNumeric(v))
+            : v.toString(),
           highlighted
         )}
       </span>
