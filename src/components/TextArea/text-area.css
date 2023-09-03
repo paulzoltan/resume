@@ -75,4 +75,6 @@ a {
   width: 3em;
   text-align: right;
   text-shadow: 0 0 0.1em #888;
+  -moz-user-modify: read-only;
+  -webkit-user-modify: read-only;
 }
