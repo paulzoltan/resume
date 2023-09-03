@@ -1,0 +1,53 @@
+{
+  "Contact": {
+    "name": "Zoltán Paul",
+    "email": "paulzoltan02@gmail.com",
+    "phone": 36303364309,
+    "address": "Budapest, 8th district",
+    "GitHub": "https://github.com/paulzoltan",
+    "CV": "https://csaknem.hu/paul-zoltan-english.pdf"
+  },
+  "Technologies": {
+    "Backend": ["PHP    3 years", "Yii2   2 years", "MySQL"],
+
+    "Frontend": [
+      "HTML         5 years",
+      "CSS/SASS     5 years",
+      "Bootstrap",
+      "SVG",
+      "Javascript   4 years",
+      "JQuery",
+      "P5.JS",
+      "npm",
+      "Webpack",
+      "React.JS     2 years",
+      "TypeScript   1 year",
+      "Jest"
+    ],
+
+    "Other": [
+      "Git/GitHub",
+      "Photoshop",
+      "Google Analytics/Console/Ad Manager/Adsense",
+      "CMS systems",
+      "Solid mathematical foundation",
+      "Algorithms and data structures",
+      "SEO",
+      "Strong intermediate-level English language skills",
+      "Creativity",
+      "Drawing skills",
+      "Web design",
+      "UI/UX"
+    ]
+  },
+  "Professional Experience": {
+    "2022": "Development of a program related to the Computational Parquetry topic within the framework of an industrial artistic procedure (JavaScript)",
+    "From 2020": "Creating websites as an entrepreneur",
+    "2019": "Rebuilding and expanding my own educational web application with a large user base (PHP/YII2 back-end)",
+    "2014": "Development of a social portal (PHP/YII2 back-end) at Vipassana Kft., Budapest",
+    "From 2014": "Maintenance and operation of the mentioned web application",
+    "2013 - 2015": "Development of my own web application (PHP back-end)",
+    "2013": "Development of a scheduling program for a courier company using the simplex method of operations research"
+  },
+  "Summary": "I gained experience in programming through my own projects and work as an entrepreneur. I am skilled in various areas of programming, but I am particularly interested in web development, specifically Front-End. In addition to my drawing skills, I am capable of handling graphic tasks, and I am also comfortable in the UX/UI field. I can implement meticulously designed layouts with pixel-perfect precision. I can find solutions to mathematical problems that arise during development. I place a strong emphasis on creating code that is easy to read, maintain, and well-structured. Learning is one of my hobbies, and I enjoy exploring new technologies or delving deeper into the ones I already know. I feel that I have developed successfully on my own so far, but working in a team at a company provides a different perspective on the profession and offers valuable new experiences. I would also appreciate the opportunity to use the English language verbally in my daily work. I would like to join a team that helps me grow and gain new experiences in the field."
+}
