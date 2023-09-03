@@ -43,14 +43,22 @@ function TextArea({ dataToDisplay }: TextAreaProps) {
   const onCursorChange = () => {
     setTimeout(() => {
       const selection = window.getSelection()
-      const startNode = selection?.anchorNode
-      const endNode = selection?.focusNode
+
+      if (selection === null || selection?.type === 'None') {
+        setHighlighted('')
+        return
+      }
+
+      const startNode = selection.anchorNode
+      const endNode = selection.focusNode
       // selection starts and ends in the  same element
       const spread = startNode !== endNode
-      const selected = window.getSelection()?.getRangeAt(0)
-      const selectedContainer = selected?.startContainer.parentElement
+
+      const selected = selection.getRangeAt(0)
+      const selectedContainer = selected.startContainer.parentElement
       const highlightable =
         selectedContainer?.classList.contains('highlightable')
+
       const selectedText = selectedContainer?.innerText ?? ''
 
       setHighlighted(!spread && highlightable ? selectedText : '')
